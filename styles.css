@@ -1,0 +1,37 @@
+/* Esto afecta a todo el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    /* Una letra limpia y legible */
+    background-color: #f4f9fc;
+    /* Un azul muy pálido, casi blanco */
+    color: #333;
+    /* Texto gris oscuro, no negro total (es más suave) */
+    text-align: center;
+    /* Centramos todo para esta prueba */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Esto afecta solo al título principal */
+h1 {
+    color: #0077b6;
+    /* Azul "Dentista" profesional */
+}
+
+/* Esto le da estilo al botón */
+button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Que aparezca la manita al pasar el mouse */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #023e8a;
+    /* Cambia de color al pasar el mouse por encima */
+}
