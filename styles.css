@@ -202,3 +202,97 @@ header {
     color: #666;
     line-height: 1.6;
 }
+
+/* === SECCIÓN NOSOTROS === */
+.nosotros-section {
+    padding: 80px 20px;
+    background-color: white;
+    /* Fondo blanco para contrastar con el gris anterior */
+}
+
+.nosotros-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* Pone imagen y texto lado a lado */
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 50px;
+    /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos de la imagen */
+.nosotros-img {
+    flex: 1;
+    /* Ocupa la mitad del espacio */
+}
+
+.nosotros-img img {
+    width: 100%;
+    /* Que la imagen no se salga de su caja */
+    border-radius: 20px;
+    box-shadow: -20px 20px 0px #e0f7fa;
+    /* Un efecto de "marco" decorativo detrás */
+}
+
+/* Estilos del texto */
+.nosotros-text {
+    flex: 1;
+    /* Ocupa la otra mitad */
+}
+
+.nosotros-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.nosotros-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Estilos de la lista de beneficios */
+.lista-beneficios {
+    list-style: none;
+    /* Quitamos los puntos feos por defecto */
+}
+
+.lista-beneficios li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.lista-beneficios i {
+    color: #0077b6;
+    /* Color azul del check */
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+/* === MEDIA QUERY (ADAPTACIÓN A CELULARES) === */
+/* Esto se activa SOLO si la pantalla mide 768px o menos (Tablets y Celulares) */
+@media (max-width: 768px) {
+    .nosotros-container {
+        flex-direction: column;
+        /* Cambia de fila (lado a lado) a columna (uno sobre otro) */
+        text-align: center;
+        /* Centra el texto */
+    }
+
+    .nosotros-text h2 {
+        font-size: 2rem;
+        /* Título un poco más chico */
+    }
+
+    .lista-beneficios li {
+        justify-content: center;
+        /* Centra los items de la lista */
+        text-align: left;
+        /* Pero mantiene el texto alineado para leer bien */
+    }
+}
