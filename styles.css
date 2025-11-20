@@ -135,3 +135,70 @@ header {
     /* Sombra suave */
     background-color: #f0f0f0;
 }
+
+/* === SECCIÓN DE SERVICIOS === */
+.servicios-section {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    /* Un gris muy clarito para diferenciar del blanco */
+    text-align: center;
+}
+
+.servicios-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+/* El Contenedor de la Cuadrícula (Grid) */
+.servicios-grid {
+    display: grid;
+    /* Esto crea columnas automáticas. Si cabe una, pone una. Si caben tres, pone tres. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    /* Espacio entre tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centra la cuadrícula en la pantalla */
+}
+
+/* Diseño de cada Tarjeta (Card) */
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Sombra muy suave y elegante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto Hover: La tarjeta "flota" al pasar el mouse */
+.card:hover {
+    transform: translateY(-10px);
+    /* Sube 10 pixeles */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los íconos */
+.icon-box {
+    font-size: 3rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
