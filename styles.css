@@ -1,37 +1,85 @@
-/* Esto afecta a todo el cuerpo de la página */
-body {
-    font-family: Arial, sans-serif;
-    /* Una letra limpia y legible */
-    background-color: #f4f9fc;
-    /* Un azul muy pálido, casi blanco */
-    color: #333;
-    /* Texto gris oscuro, no negro total (es más suave) */
-    text-align: center;
-    /* Centramos todo para esta prueba */
+/* === RESET UNIVERSAL === */
+/* Quitamos los márgenes que los navegadores traen por defecto */
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Esto afecta solo al título principal */
-h1 {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* === BARRA DE NAVEGACIÓN === */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Una sombra sutil abajo */
+    position: fixed;
+    /* Para que el menú se quede fijo al bajar */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* Asegura que el menú esté encima de todo */
+}
+
+.navbar {
+    display: flex;
+    /* ¡Aquí ocurre la magia! Pone los elementos lado a lado */
+    justify-content: space-between;
+    /* Logo a la izquierda, menú a la derecha */
+    align-items: center;
+    /* Centrados verticalmente */
+    padding: 1rem 5%;
+    /* Espacio interno: Arriba/Abajo 1rem, Lados 5% */
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #0077b6;
-    /* Azul "Dentista" profesional */
-}
-
-/* Esto le da estilo al botón */
-button {
-    background-color: #0077b6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    /* Bordes redondeados */
+    /* Azul Clínico */
     cursor: pointer;
-    /* Que aparezca la manita al pasar el mouse */
-    font-size: 16px;
 }
 
-button:hover {
-    background-color: #023e8a;
-    /* Cambia de color al pasar el mouse por encima */
+/* Estilo de la lista de enlaces */
+.nav-links {
+    list-style: none;
+    /* Quita los puntos de la lista */
+    display: flex;
+    /* Pone los items (Inicio, Servicios...) en fila */
+}
+
+.nav-links li {
+    margin-left: 30px;
+    /* Espacio entre cada opción del menú */
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* Quita el subrayado azul feo */
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    /* Suaviza el cambio de color */
+}
+
+.nav-links a:hover {
+    color: #0077b6;
+    /* Cambia a azul cuando pasas el mouse */
+}
+
+/* === SECCIÓN HERO (TEMPORAL) === */
+.hero {
+    height: 100vh;
+    /* Ocupa el 100% de la altura de la pantalla */
+    background-color: #e0f7fa;
+    /* Fondo celeste temporal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    /* Para que el menú fijo no tape el título */
 }
