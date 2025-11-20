@@ -71,15 +71,67 @@ header {
     /* Cambia a azul cuando pasas el mouse */
 }
 
-/* === SECCIÓN HERO (TEMPORAL) === */
+/* === SECCIÓN HERO === */
 .hero {
     height: 100vh;
-    /* Ocupa el 100% de la altura de la pantalla */
-    background-color: #e0f7fa;
-    /* Fondo celeste temporal */
+    /* Altura completa de la pantalla */
+    width: 100%;
+
+    /* Aquí cargamos la imagen de fondo y le ponemos una capa oscura encima */
+    /* La función url() busca la imagen en internet */
+    background: linear-gradient(rgba(0, 119, 182, 0.7), rgba(0, 180, 216, 0.7)),
+        url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1920&auto=format&fit=crop');
+
+    background-size: cover;
+    /* Asegura que la foto cubra todo sin deformarse */
+    background-position: center;
+    /* Centra la foto */
+
+    /* Flexbox para centrar el contenido */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
-    /* Para que el menú fijo no tape el título */
+    text-align: center;
+    color: white;
+    /* Texto blanco para que contraste */
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    /* Texto grande */
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    /* Evita que el texto sea muy ancho en pantallas grandes */
+    margin-left: auto;
+    /* Estos dos margins automáticos centran el bloque */
+    margin-right: auto;
+}
+
+/* Estilo del Botón de Acción (CTA) */
+.btn-cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: white;
+    color: #0077b6;
+    /* Azul de la marca */
+    border-radius: 30px;
+    /* Bordes muy redondos */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-cta:hover {
+    transform: scale(1.05);
+    /* Crece un poquito al pasar el mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra suave */
+    background-color: #f0f0f0;
 }
