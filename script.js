@@ -1,8 +1,19 @@
-// 1. Buscamos el botón en el HTML usando su ID
-const boton = document.getElementById('btn-prueba');
+// Manejo del Menú Responsive (opcional, por si queremos mejorarlo luego)
+// ...
 
-// 2. Le agregamos un "escucha" (listener) para el evento click
-boton.addEventListener('click', function () {
-    // 3. Esto es lo que pasa cuando hacen clic
-    alert('¡Genial! Tu entorno de desarrollo está listo y funcionando.');
+// Manejo del Formulario de Contacto
+const formulario = document.getElementById('formulario-contacto');
+
+formulario.addEventListener('submit', function (evento) {
+    // 1. Evitamos que la página se recargue (lo normal en un form)
+    evento.preventDefault();
+
+    // 2. Aquí iría el código para mandar el mail a un servidor real.
+    // Como no tenemos servidor aún, simularemos el éxito.
+
+    // 3. Mostramos una alerta bonita
+    alert('¡Gracias por escribirnos! Nos pondremos en contacto contigo pronto.');
+
+    // 4. Limpiamos el formulario
+    formulario.reset();
 });

@@ -390,3 +390,130 @@ header {
         /* Pero mantiene el texto alineado para leer bien */
     }
 }
+
+/* === SECCIÓN DE CONTACTO === */
+.contacto-section {
+    padding: 80px 20px;
+    background-color: #023e8a;
+    /* Azul oscuro fuerte */
+    color: white;
+    text-align: center;
+}
+
+.contacto-subtitle {
+    margin-bottom: 40px;
+    color: #caf0f8;
+    /* Azul muy clarito */
+}
+
+.contacto-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    /* Alinea arriba */
+    text-align: left;
+}
+
+/* Estilos de la información de contacto */
+.contacto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #48cae4;
+    /* Un cyan brillante para los íconos */
+}
+
+/* Estilos del Formulario */
+.contacto-form {
+    flex: 1.5;
+    /* El formulario ocupa más espacio que la info */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    /* Quita el borde azul al hacer clic */
+}
+
+/* Efecto al escribir en el input */
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    box-shadow: 0 0 0 3px #48cae4;
+    /* Resplandor cyan */
+}
+
+.btn-submit {
+    background-color: #48cae4;
+    color: #023e8a;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: white;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #001233;
+    /* Casi negro */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #48cae4;
+}
+
+/* === RESPONSIVE CONTACTO === */
+@media (max-width: 768px) {
+    .contacto-wrapper {
+        flex-direction: column;
+    }
+
+    .contacto-info,
+    .contacto-form {
+        width: 100%;
+        /* En celular ocupan todo el ancho */
+    }
+}
