@@ -284,99 +284,56 @@ header {
         /* Centra el texto */
     }
 
-    .nosotros-text h2 {
-        font-size: 2rem;
-        /* Título un poco más chico */
-    }
+    /* --- ARREGLO DEL MENÚ (NAVBAR) EN MÓVIL --- */
 
-    .lista-beneficios li {
-        justify-content: center;
-        /* Centra los items de la lista */
-        text-align: left;
-        /* Pero mantiene el texto alineado para leer bien */
-    }
-}
-
-/* === SECCIÓN NOSOTROS === */
-.nosotros-section {
-    padding: 80px 20px;
-    background-color: white;
-    /* Fondo blanco para contrastar con el gris anterior */
-}
-
-.nosotros-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    /* Pone imagen y texto lado a lado */
-    align-items: center;
-    /* Centra verticalmente */
-    gap: 50px;
-    /* Espacio entre la imagen y el texto */
-}
-
-/* Estilos de la imagen */
-.nosotros-img {
-    flex: 1;
-    /* Ocupa la mitad del espacio */
-}
-
-.nosotros-img img {
-    width: 100%;
-    /* Que la imagen no se salga de su caja */
-    border-radius: 20px;
-    box-shadow: -20px 20px 0px #e0f7fa;
-    /* Un efecto de "marco" decorativo detrás */
-}
-
-/* Estilos del texto */
-.nosotros-text {
-    flex: 1;
-    /* Ocupa la otra mitad */
-}
-
-.nosotros-text h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.nosotros-text p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-/* Estilos de la lista de beneficios */
-.lista-beneficios {
-    list-style: none;
-    /* Quitamos los puntos feos por defecto */
-}
-
-.lista-beneficios li {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
-    color: #444;
-}
-
-.lista-beneficios i {
-    color: #0077b6;
-    /* Color azul del check */
-    margin-right: 15px;
-    font-size: 1.2rem;
-}
-
-/* === MEDIA QUERY (ADAPTACIÓN A CELULARES) === */
-/* Esto se activa SOLO si la pantalla mide 768px o menos (Tablets y Celulares) */
-@media (max-width: 768px) {
-    .nosotros-container {
+    /* 1. Cambiamos la barra para que sea una columna (uno sobre otro) */
+    .navbar {
         flex-direction: column;
-        /* Cambia de fila (lado a lado) a columna (uno sobre otro) */
-        text-align: center;
-        /* Centra el texto */
+        /* Logo arriba, menú abajo */
+        height: auto;
+        /* Dejamos que la altura crezca lo necesario */
+        padding: 15px;
+        /* Un poco más de espacio interno */
     }
+
+    /* 2. Ajustamos la lista de enlaces */
+    .nav-links {
+        margin-top: 15px;
+        /* Separamos el menú del logo */
+        justify-content: center;
+        /* Centramos los enlaces */
+        width: 100%;
+        padding: 0;
+        gap: 10px;
+        /* Espacio entre las opciones */
+    }
+
+    /* 3. Ajustamos cada botón del menú */
+    .nav-links li {
+        margin-left: 0;
+        /* Quitamos el margen izquierdo que usamos en PC */
+        margin: 5px;
+        /* Espacio uniforme alrededor */
+    }
+
+    /* 4. Importante: Como la barra ahora es más alta, bajamos el contenido del Hero */
+    .hero {
+        margin-top: 130px;
+        /* Empujamos la foto hacia abajo para que el menú no la tape */
+        height: auto;
+        /* Permitimos que la altura se adapte */
+        min-height: 80vh;
+        /* Mínimo el 80% de la pantalla */
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* 5. Ajustamos el tamaño del título gigante para que no se vea tan enorme en celular */
+    .hero-content h1 {
+        font-size: 2rem;
+        /* Reducimos el tamaño de la letra */
+    }
+
 
     .nosotros-text h2 {
         font-size: 2rem;
